@@ -13,6 +13,27 @@ const nextConfig = {
       },
     ];
   },
+  async headers() {
+    const htmlCache = [
+      {
+        key: "Cache-Control",
+        value: "public, max-age=3600, stale-while-revalidate=86400",
+      },
+      {
+        key: "CDN-Cache-Control",
+        value: "public, max-age=86400, stale-while-revalidate=604800",
+      },
+      {
+        key: "Cloudflare-CDN-Cache-Control",
+        value: "public, max-age=86400, stale-while-revalidate=604800",
+      },
+    ];
+
+    return [
+      { source: "/kemitraan-tea-tree", headers: htmlCache },
+      { source: "/terima-kasih", headers: htmlCache },
+    ];
+  },
 };
 
 export default nextConfig;
