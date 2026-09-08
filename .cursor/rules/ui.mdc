@@ -1,0 +1,26 @@
+---
+description: Page CSS, client boundaries, and CTA placement for the kemitraan landing
+globs: "{app,components}/**/*.{tsx,css}"
+alwaysApply: false
+---
+
+# UI conventions
+
+Keep almost everything a **server component**. Client-only: `CekKotaProvider`, `CekKotaModal`, `CityCombobox`, `CtaBlock`.
+
+## CTA
+
+Wireframes put “Cek Kota Saya” only on **Hero** and **HighlightCta**. Other sections must not gain `<CtaBlock />` unless explicitly asked. All CTAs open the same lightbox via `useCekKota()` — never navigate away on that button.
+
+## CSS
+
+- Prefix page classes `pk-`. Use DS tokens (`--accent`, `--fg`, `--r-*`, `--font-sans`) and registration kit (`lmn-group`, `lmn-label`, `lmn-spinner`) for the form.
+- Mobile-first: default = 375px (3b); `@media (min-width: 900px)` = 1440px (3a). Hero photo uses `.pk-hero-media { order: -1 }` below 900px.
+- Photos: `next/image` + dimensions from `lib/content.ts`. Prefer `.pk-media--natural` so images are not cropped. SVGs in navbar/footer stay as `<img>`.
+- Placeholder assets: `.pk-slot` inside `.pk-media`. Drop the slot when replacing with real media.
+- Respect `prefers-reduced-motion`. Focus rings: `:focus-visible` with `--accent`.
+- Navbar scrolls with the page (not sticky/blur). Footer legal links go to lumena.id (`privasi`, `ketentuan`, `disclaimer`).
+
+## Accessibility
+
+Lightbox: `role="dialog"` + `aria-modal`, focus trap, Esc / overlay / × close, restore focus to trigger. Combobox: arrow keys + Enter; Esc closes the list first, not the modal. Every field has a `<label>` and errors use `role="alert"`.

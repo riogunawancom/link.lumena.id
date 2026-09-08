@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics=""><meta name="design_doc_mode" content="canvas">
+<link rel="stylesheet" href="_ds/lumena-design-system-019df29c-0eaa-785d-979c-d8754d6d6797/colors_and_type.css">
+<link rel="stylesheet" href="_ds/lumena-design-system-019df29c-0eaa-785d-979c-d8754d6d6797/styles.css">
+<script src="_ds/lumena-design-system-019df29c-0eaa-785d-979c-d8754d6d6797/_ds_bundle.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&amp;family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#f0eee9;font-family:Poppins,system-ui,sans-serif}
+a{color:#1a1a1a}a:hover{color:#0f766e}
+.dv-turn{padding:40px 44px 32px;border-bottom:1px solid rgba(0,0,0,.08);scroll-margin-top:16px}
+.dv-thd{display:flex;align-items:baseline;gap:10px;margin:0 0 20px}
+.dv-tid{font:600 10px ui-monospace,Menlo,monospace;padding:3px 7px;background:#1a1a1a;color:#fff;border-radius:4px;text-decoration:none}
+.dv-tname{font:600 13px/1.2 Poppins,sans-serif;color:#1a1a1a}
+.dv-opts{display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start}
+.dv-opt{flex:none;display:flex;flex-direction:column;gap:9px;scroll-margin-top:16px}
+.dv-oid{font:600 10.5px ui-monospace,Menlo,monospace;padding:3px 7px;background:rgba(0,0,0,.08);color:#1a1a1a;border-radius:5px;text-decoration:none}
+.dv-olabel{display:flex;align-items:baseline;gap:8px;font:400 11px/1.3 Poppins,sans-serif;color:rgba(0,0,0,.55)}
+.dv-card{max-width:100%;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.06);overflow:hidden}
+.dv-opt:target .dv-oid{background:#0f766e;color:#fff}
+.dv-next{margin:22px 0 0;font:12px/1.5 Poppins,sans-serif;color:rgba(0,0,0,.5)}
+.wf-sec{padding:24px 28px;border-bottom:1px dashed #d3cfc8;position:relative;display:flex;flex-direction:column;gap:14px}
+.wf-tag{position:absolute;top:8px;right:10px;font:600 8px ui-monospace,Menlo,monospace;letter-spacing:.08em;color:#8cd5cd;background:#20635d;padding:3px 6px;border-radius:4px}
+.wf-eyebrow{font:600 9px Poppins,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#8f8a82;margin:0}
+.wf-h1{font:700 26px/1.2 Poppins,sans-serif;letter-spacing:-.02em;color:#1d1c1a;margin:0}
+.wf-h2{font:700 17px/1.25 Poppins,sans-serif;letter-spacing:-.02em;color:#1d1c1a;margin:0}
+.wf-h3{font:600 12px/1.3 Poppins,sans-serif;color:#1d1c1a;margin:0}
+.wf-p{font:400 11px/1.6 Poppins,sans-serif;color:#5c5852;margin:0}
+.wf-img{background:repeating-linear-gradient(135deg,#eceae5,#eceae5 6px,#e3e0da 6px,#e3e0da 12px);border:1px dashed #b6b1a9;border-radius:12px;display:flex;align-items:center;justify-content:center;text-align:center;padding:10px;font:500 11px/1.4 Caveat,cursive;color:#7a746c}
+.wf-btn{background:#8cece3;color:#17302e;border-radius:10px;padding:11px 18px;font:600 12px Poppins,sans-serif;display:flex;align-items:center;justify-content:center;gap:6px;box-shadow:0 3px 10px rgba(140,236,227,.45)}
+.wf-cta{display:flex;flex-direction:column;gap:9px;align-items:flex-start;padding-top:2px}
+.wf-ctaq{font:500 11px/1.5 Poppins,sans-serif;color:#3f3c38;margin:0}
+.wf-box{border:1px solid #ddd9d2;border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:8px;background:#fbfaf8}
+.wf-pill{display:inline-flex;align-items:center;border:1px solid #c9c4bc;border-radius:999px;padding:5px 11px;font:500 10px Poppins,sans-serif;color:#5c5852}
+.wf-anno{font:500 13px/1.3 Caveat,cursive;color:#0f766e}
+.wf-2col{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:center}
+.wf-3col{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.wf-bar{height:7px;border-radius:4px;background:#e4e1db}
+</style></helmet>
+
+<section class="dv-turn" id="t3">
+<div class="dv-thd"><a class="dv-tid" href="#t3">3</a><span class="dv-tname">Gelap Lumena — desktop, mobile, lightbox &amp; Thank You</span></div>
+<div class="dv-opts">
+
+<div class="dv-opt" id="3a"><div class="dv-olabel"><a class="dv-oid" href="#3a">3a</a>Desktop 1440 — dua kolom, konten maks 1120px</div>
+<div class="dv-card" style="width:960px;background:#211f21;border-color:rgba(255,255,255,.12)">
+  <div style="display:flex;align-items:center;justify-content:space-between;padding:18px 56px;border-bottom:1px solid rgba(255,255,255,.12)">
+    <img src="assets/lumena-riptide-3-fixed.svg" alt="Lumena" style="height:24px;width:auto">
+    <span style="border:1px solid rgba(255,255,255,.2);border-radius:999px;padding:7px 14px;font:500 11px Poppins,sans-serif;color:rgba(255,255,255,.75)">Program Kemitraan</span>
+  </div>
+
+  <div data-screen-label="Hero" style="padding:56px;display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;background:radial-gradient(circle at 100% 0%,rgba(140,236,227,.10),transparent 55%)">
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <p class="wf-eyebrow" style="color:#8cece3;font-size:11px">KESEMPATAN EMAS</p>
+      <h1 style="font: 700 38px/1.12 Poppins,sans-serif; letter-spacing: -.03em; color: #fff; margin: 0; text-wrap: pretty; font-size: 33px">Jadi Yang Pertama Di Kota Anda &amp; Dapatkan Keuntungan Hingga 153%.</h1>
+      <p class="wf-p" style="color:rgba(255,255,255,.7);font-size:14px;max-width:460px">Lumena Tea Tree Acne Serum membuka kemitraan reseller, agen, dan distributor di kota Anda.</p>
+      <div class="wf-cta" style="gap:12px">
+        <p class="wf-ctaq" style="color:rgba(255,255,255,.75);font-size:13px;max-width:420px">Tertarik menjadi mitra yang melayani penjualan di kota Anda? Lihat ketersediaan di kota Anda ↓</p>
+        <div class="wf-btn" style="padding:15px 28px;font-size:14px">Cek Kota Saya</div>
+      </div>
+    </div>
+    <div class="wf-img" style="height:340px;border-radius:14px;background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.22);color:rgba(255,255,255,.6);font-size:12px">Foto produk hero-1-tto<br>(botol serum, latar bersih)</div>
+  </div>
+
+  <div data-screen-label="Product Knowledge" style="padding:56px;border-top:1px solid rgba(255,255,255,.12);display:flex;flex-direction:column;gap:32px">
+    <div style="display:grid;grid-template-columns:.8fr 1.2fr;gap:36px;align-items:center">
+      <div class="wf-img" style="height:250px;border-radius:14px;background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.22);color:rgba(255,255,255,.6);font-size:12px">Foto produk<br>(lumena.id/tea-tree)</div>
+      <div style="display:flex;flex-direction:column;gap:14px">
+        
+        <h3 style="font: 600 16px Poppins,sans-serif; color: #8cece3; margin: 0; font-size: 25px">Lumena Tea Tree Acne Serum</h3>
+        <p class="wf-p" style="color:rgba(255,255,255,.7);font-size:13px;max-width:520px">Serum untuk kulit berjerawat: melawan jerawat membandel, meredakan peradangan, dan menyamarkan bekasnya. <br><br>Memadukan tea tree oil, salicylic acid, niacinamide + zinc PCA, dan centella + panthenol. <br><br>Tekstur ringan, cepat meresap, tanpa pewangi, cocok untuk kulit sensitif.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px"><span class="wf-pill" style="color:rgba(255,255,255,.8);border-color:rgba(255,255,255,.22)">BPOM NA18250118100</span><span class="wf-pill" style="color:rgba(255,255,255,.8);border-color:rgba(255,255,255,.22)">Cruelty-free</span><span class="wf-pill" style="color:rgba(255,255,255,.8);border-color:rgba(255,255,255,.22)">Fragrance-free</span></div>
+      </div>
+    </div>
+    <div class="wf-3col" style="gap:24px">
+      <div style="background:#454345;border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:12px;display:flex;flex-direction:column;gap:10px"><div class="wf-img" style="height:290px;border-radius:10px;background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.22);color:rgba(255,255,255,.6);font-size:11px">Video 1 · 9:16<br>tanpa autoplay</div><p class="wf-p" style="color:#fff;font-size:12px;padding:0 4px 4px">Aurelia Bianca, 23 tahun</p></div>
+      <div style="background:#454345;border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:12px;display:flex;flex-direction:column;gap:10px"><div class="wf-img" style="height:290px;border-radius:10px;background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.22);color:rgba(255,255,255,.6);font-size:11px">Video 2 · 9:16</div><p class="wf-p" style="color:#fff;font-size:12px;padding:0 4px 4px">Sarah Said, 44 tahun</p></div>
+      <div style="background:#454345;border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:12px;display:flex;flex-direction:column;gap:10px"><div class="wf-img" style="height:290px;border-radius:10px;background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.22);color:rgba(255,255,255,.6);font-size:11px">Video 3 · 9:16</div><p class="wf-p" style="color:#fff;font-size:12px;padding:0 4px 4px">Rachelia, 20 tahun</p></div>
+    </div>
+  </div>
+
+  <div data-screen-label="Hasil Nyata" style="padding:0 56px 56px;display:flex;flex-direction:column;gap:20px">
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <p class="wf-eyebrow" style="color:#8cece3;font-size:11px">HASIL NYATA</p>
+      <h2 style="font:700 26px/1.2 Poppins,sans-serif;letter-spacing:-.025em;color:#fff;margin:0">Lihat Perubahannya</h2>
+      <p class="wf-p" style="color:rgba(255,255,255,.7);font-size:13px">Simulasi penggunaan produk Tea Tree Acne Serum.</p>
+    </div>
+    <div class="wf-3col" style="gap:24px"><div style="background:#454345;border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:12px;display:flex;flex-direction:column;gap:10px"><div class="wf-img" style="aspect-ratio:1/1;border-radius:10px;background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.22);color:rgba(255,255,255,.6);font-size:11px">Foto week-1 (lumena.id)</div><div style="padding:0 4px 4px;display:flex;flex-direction:column;gap:3px"><h3 style="font:600 14px Poppins,sans-serif;color:#8cece3;margin:0">Sebelum</h3><p class="wf-p" style="color:rgba(255,255,255,.7);font-size:12px">Jerawat aktif &amp; meradang</p></div></div><div style="background:#454345;border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:12px;display:flex;flex-direction:column;gap:10px"><div class="wf-img" style="aspect-ratio:1/1;border-radius:10px;background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.22);color:rgba(255,255,255,.6);font-size:11px">Foto week-3 (lumena.id)</div><div style="padding:0 4px 4px;display:flex;flex-direction:column;gap:3px"><h3 style="font:600 14px Poppins,sans-serif;color:#8cece3;margin:0">3 Minggu</h3><p class="wf-p" style="color:rgba(255,255,255,.7);font-size:12px">Jerawat &amp; kemerahan berkurang</p></div></div><div style="background:#454345;border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:12px;display:flex;flex-direction:column;gap:10px"><div class="wf-img" style="aspect-ratio:1/1;border-radius:10px;background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.22);color:rgba(255,255,255,.6);font-size:11px">Foto week-6 (lumena.id)</div><div style="padding:0 4px 4px;display:flex;flex-direction:column;gap:3px"><h3 style="font:600 14px Poppins,sans-serif;color:#8cece3;margin:0">6 Minggu</h3><p class="wf-p" style="color:rgba(255,255,255,.7);font-size:12px">Bersih dari jerawat, bekas memudar</p></div></div></div>
+    <p class="wf-p" style="font-size:11px;color:rgba(255,255,255,.5)">Gambar di atas merupakan ilustrasi simulasi untuk menggambarkan tahapan perawatan. Hasil dapat berbeda pada setiap individu.</p>
+  </div>
+
+  <div data-screen-label="Formulator" style="padding:56px;border-top:1px solid rgba(255,255,255,.12);display:grid;grid-template-columns:.75fr 1.25fr;gap:36px;align-items:center">
+    <div class="wf-img" style="height:300px;border-radius:14px;background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.22);color:rgba(255,255,255,.6);font-size:12px">Foto dr. Nico A. Lumenta</div>
+    <div style="background:#454345;border:1px solid rgba(255,255,255,.15);border-left:3px solid #8cece3;border-radius:14px;padding:28px 24px;display:flex;flex-direction:column;gap:14px">
+      <h2 style="font: 700 24px/1.2 Poppins,sans-serif; letter-spacing: -.025em; color: #fff; margin: 0; font-size: 14px">Formulator</h2>
+      <div style="display:flex;flex-direction:column;gap:5px"><h3 style="font: 600 15px Poppins,sans-serif; color: #fff; margin: 0; font-size: 25px">dr. Nico A. Lumenta, K.Nefro, MM</h3><p class="wf-eyebrow" style="color:#8cece3;font-size:10px">Dokter senior, pencetus keamanan pasien · Kabid Litbang KARS</p></div>
+      <p class="wf-p" style="color:rgba(255,255,255,.7);font-size:13px">Diformulasikan oleh dokter yang mengutamakan keamanan pasien.<br><br>Di balik setiap botol, ada dokter senior yang bertanggung jawab. · Produk yang lahir dari prinsip keamanan pasien.</p>
+      
+    </div>
+  </div>
+
+  <div data-screen-label="Peluang" style="padding:56px;border-top:1px solid rgba(255,255,255,.12);display:flex;flex-direction:column;gap:28px">
+    <h2 style="font: 700 33px/1.2 Poppins,sans-serif; letter-spacing: -.03em; color: #fff; margin: 0; white-space: nowrap; font-size: 30px">Pasarnya besar, margin tinggi &amp; pembelinya balik lagi.</h2>
+    <div class="wf-3col" style="gap:24px">
+      <div style="background:#454345;border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:28px 24px;display:flex;flex-direction:column;gap:14px"><div style="width:40px;height:40px;border-radius:10px;background:rgba(140,236,227,.12);border:1px solid rgba(140,236,227,.35);display:flex;align-items:center;justify-content:center;color:#8cece3"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"></circle><path d="M2.5 19c0-3.3 2.9-5 6.5-5s6.5 1.7 6.5 5"></path><path d="M16.5 6.2a3 3 0 0 1 0 5.6"></path><path d="M18.5 14.4c1.9.6 3 1.9 3 4.6"></path></svg></div><h3 style="font:600 18px Poppins,sans-serif;color:#fff;margin:0">Pasar Luas</h3><p class="wf-p" style="color:rgba(255,255,255,.7);font-size:13px">Jerawat dialami hampir semua orang usia 12–30 tahun, dan mereka aktif mencari solusinya setiap hari. Permintaannya sudah ada, Anda tinggal menawarkan.</p></div>
+      <div style="background:#454345;border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:28px 24px;display:flex;flex-direction:column;gap:14px"><div style="width:40px;height:40px;border-radius:10px;background:rgba(140,236,227,.12);border:1px solid rgba(140,236,227,.35);display:flex;align-items:center;justify-content:center;color:#8cece3"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 17 9.5 10.5 13.5 14.5 21 7"></polyline><polyline points="15 7 21 7 21 13"></polyline></svg></div><h3 style="font:600 18px Poppins,sans-serif;color:#fff;margin:0">Untung Besar</h3><p class="wf-p" style="color:rgba(255,255,255,.7);font-size:13px">Setiap botol yang terjual memberi untung hingga 153%, tergantung level kemitraan Anda. Modal kembali dari botol pertama, sisanya keuntungan Anda.</p></div>
+      <div style="background:#454345;border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:28px 24px;display:flex;flex-direction:column;gap:14px"><div style="width:40px;height:40px;border-radius:10px;background:rgba(140,236,227,.12);border:1px solid rgba(140,236,227,.35);display:flex;align-items:center;justify-content:center;color:#8cece3"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 13.7-5.6L21 9"></path><polyline points="21 4 21 9 16 9"></polyline><path d="M20 12a8 8 0 0 1-13.7 5.6L3 15"></path><polyline points="3 20 3 15 8 15"></polyline></svg></div><h3 style="font:600 18px Poppins,sans-serif;color:#fff;margin:0">Repeat Order</h3><p class="wf-p" style="color:rgba(255,255,255,.7);font-size:13px">Satu botol habis dalam sebulan, dan jerawat butuh perawatan rutin. Pembeli yang cocok akan kembali ke Anda tanpa perlu dicari lagi.</p></div>
+    </div>
+    
+  </div>
+
+  <div data-screen-label="Fasilitas Mitra" style="padding:56px;border-top:1px solid rgba(255,255,255,.12);display:flex;flex-direction:column;gap:28px">
+    <h2 style="font:700 30px/1.2 Poppins,sans-serif;letter-spacing:-.03em;color:#fff;margin:0;white-space:nowrap">Fasilitas mitra yang mendukung penjualan Anda.</h2>
+    <div style="display:grid;grid-template-columns:1.35fr 1fr;gap:24px;align-items:stretch">
+      <div style="background:linear-gradient(135deg,rgba(140,236,227,.10),rgba(140,236,227,.03));border:1px solid #8cece3;border-radius:14px;padding:28px 24px;display:flex;flex-direction:column;gap:14px">
+        <div style="width:40px;height:40px;border-radius:9px;background:rgba(140,236,227,.12);border:1px solid rgba(140,236,227,.35);display:flex;align-items:center;justify-content:center;color:#8cece3"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"></path><circle cx="12" cy="10" r="2.6"></circle></svg></div>
+        <h3 style="font:600 18px Poppins,sans-serif;color:#fff;margin:0">Kontak Anda di Website Resmi Lumena</h3>
+        <p class="wf-p" style="color:rgba(255,255,255,.75);font-size:13px">Nama dan nomor WhatsApp Anda dipasang di halaman resmi Lumena sebagai mitra kota Anda. Konsumen yang mencari produk di kota Anda menghubungi Anda langsung.</p>
+        <div class="wf-img" style="height:130px;border-radius:12px;background:rgba(255,255,255,.06);border-color:rgba(140,236,227,.4);color:rgba(255,255,255,.6);font-size:11px">Mockup: halaman "Mitra di kota Anda"</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:24px">
+        <div style="flex:1;background:#454345;border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:24px;display:flex;flex-direction:column;gap:9px"><div style="width:34px;height:34px;border-radius:9px;background:rgba(140,236,227,.12);border:1px solid rgba(140,236,227,.35);display:flex;align-items:center;justify-content:center;color:#8cece3"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5A2 2 0 0 1 5 6.5h2l1.2-2h7.6L17 6.5h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"></path><circle cx="12" cy="12.5" r="3.4"></circle></svg></div><h3 style="font:600 15px Poppins,sans-serif;color:#fff;margin:0">Foto &amp; Video Produk</h3><p class="wf-p" style="color:rgba(255,255,255,.7);font-size:13px">Kumpulan foto dan video produk siap pakai — tinggal unggah ke TikTok, Instagram, atau marketplace tanpa perlu membuat materi sendiri.</p></div>
+        <div style="flex:1;background:#454345;border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:24px;display:flex;flex-direction:column;gap:9px"><div style="width:34px;height:34px;border-radius:9px;background:rgba(140,236,227,.12);border:1px solid rgba(140,236,227,.35);display:flex;align-items:center;justify-content:center;color:#8cece3"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="15" rx="2.5"></rect><polygon points="10.5 9 15 12 10.5 15"></polygon></svg></div><h3 style="font:600 15px Poppins,sans-serif;color:#fff;margin:0">Video Pengguna</h3><p class="wf-p" style="color:rgba(255,255,255,.7);font-size:13px">Video pengguna yang boleh Anda pakai di semua kanal jualan sebagai bukti produk bekerja.</p></div>
+      </div>
+    </div>
+    
+  </div>
+
+  <div data-screen-label="Highlight CTA" style="padding:72px 56px;border-top:1px solid rgba(255,255,255,.12);background:linear-gradient(135deg,rgba(140,236,227,.12),rgba(140,236,227,.03));display:flex;flex-direction:column;gap:16px;align-items:center;text-align:center">
+    <h2 style="font:700 34px/1.15 Poppins,sans-serif;letter-spacing:-.03em;color:#fff;margin:0">Jadilah mitra pertama di kota Anda.</h2>
+    <p class="wf-ctaq" style="color:rgba(255,255,255,.78);font-size:14px;max-width:480px">Tertarik menjadi mitra yang melayani penjualan di kota Anda? Lihat ketersediaan di kota Anda ↓</p>
+    <div class="wf-btn" style="padding:16px 32px;font-size:15px">Cek Kota Saya</div>
+  </div>
+
+  <div style="padding:36px 56px;display:flex;flex-direction:column;gap:12px;border-top:1px solid rgba(255,255,255,.12)">
+    <img src="assets/lumena-white-1-fixed.svg" alt="Lumena" style="height:36px;width:auto;align-self:flex-start">
+    <div style="display:flex;gap:20px;font:400 12px Poppins,sans-serif;color:rgba(255,255,255,.7)"><span>Kebijakan Privasi</span><span>Syarat &amp; Ketentuan</span><span>Disclaimer</span></div>
+    <p class="wf-p" style="font-size:10px;line-height:1.6;color:rgba(255,255,255,.5)">Persentase yang disebutkan adalah margin per botol dan bukan jaminan penghasilan, hasil setiap mitra dapat berbeda; Lumena Tea Tree Acne Serum adalah produk kosmetik terdaftar BPOM NA18250118100, bukan obat; dan situs ini tidak berafiliasi dengan atau didukung oleh Facebook, Instagram, maupun Meta Platforms, Inc.</p>
+    <p class="wf-p" style="font-size:10px;color:rgba(255,255,255,.5)">© 2026 PT Lumena Mentari Nusantara</p>
+  </div>
+</div></div>
+
+<div class="dv-opt" id="3b"><div class="dv-olabel"><a class="dv-oid" href="#3b">3b</a>Mobile 375 — semua 2 kolom jadi 1, teks di atas gambar</div>
+<div class="dv-card" style="width:375px;background:#211f21;border-color:rgba(255,255,255,.12)">
+  <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 20px;border-bottom:1px solid rgba(255,255,255,.12)">
+    <img src="assets/lumena-riptide-3-fixed.svg" alt="Lumena" style="height:20px;width:auto">
+    <span style="border:1px solid rgba(255,255,255,.2);border-radius:999px;padding:5px 11px;font:500 10px Poppins,sans-serif;color:rgba(255,255,255,.75)">Program Kemitraan</span>
+  </div>
+
+  <div data-screen-label="Hero" style="padding:28px 20px;display:flex;flex-direction:column;gap:14px;background:radial-gradient(circle at 100% 0%,rgba(140,236,227,.10),transparent 60%)">
+    <div class="wf-img" style="height:220px;border-radius:14px;background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.22);color:rgba(255,255,255,.6)">Foto produk hero-1-tto</div>
+    <p class="wf-eyebrow" style="color:#8cece3">KESEMPATAN EMAS</p>
+    <h1 style="font:700 26px/1.15 Poppins,sans-serif;letter-spacing:-.03em;color:#fff;margin:0;text-wrap:pretty">Jadi Yang Pertama Di Kota Anda &amp; Dapatkan Keuntungan Hingga 153%.</h1>
+    <p class="wf-p" style="color:rgba(255,255,255,.7);font-size:13px">Lumena Tea Tree Acne Serum membuka kemitraan reseller, agen, dan distributor di kota Anda.</p>
+    <p class="wf-ctaq" style="color:rgba(255,255,255,.75)">Tertarik menjadi mitra yang melayani penjualan di kota Anda? Lihat ketersediaan di kota Anda ↓</p>
+    <div class="wf-btn" style="padding:15px 20px;font-size:14px">Cek Kota Saya</div>
+  </div>
+
+  <div data-screen-label="Product Knowledge" style="padding:28px 20px;border-top:1px solid rgba(255,255,255,.12);display:flex;flex-direction:column;gap:14px">
+    <div style="background:#454345;border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:20px 16px;display:flex;flex-direction:column;gap:12px">
+      <div class="wf-img" style="height:180px;border-radius:12px;background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.22);color:rgba(255,255,255,.6)">Foto produk</div>
+      <h3 style="font: 600 20px/1.25 Poppins,sans-serif; color: #8cece3; margin: 0; font-size: 18px">Lumena Tea Tree Acne Serum</h3>
+      <p class="wf-p" style="color:rgba(255,255,255,.7);font-size:12px">Serum untuk kulit berjerawat: melawan jerawat membandel, meredakan peradangan, dan menyamarkan bekasnya. <br><br>Memadukan tea tree oil, salicylic acid, niacinamide + zinc PCA, dan centella + panthenol. <br><br>Tekstur ringan, cepat meresap, tanpa pewangi, cocok untuk kulit sensitif.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:6px"><span class="wf-pill" style="font-size:9px;color:rgba(255,255,255,.8);border-color:rgba(255,255,255,.22)">BPOM NA18250118100</span><span class="wf-pill" style="font-size:9px;color:rgba(255,255,255,.8);border-color:rgba(255,255,255,.22)">Cruelty-free</span><span class="wf-pill" style="font-size:9px;color:rgba(255,255,255,.8);border-color:rgba(255,255,255,.22)">Fragrance-free</span></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <div style="background:#454345;border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:12px;display:flex;flex-direction:column;gap:10px"><div class="wf-img" style="aspect-ratio:9/16;border-radius:10px;background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.22);color:rgba(255,255,255,.6)">Video 1 · 9:16 · tanpa autoplay</div><p class="wf-p" style="color:#fff;font-size:12px;padding:0 4px 4px">Aurelia Bianca, 23 tahun</p></div>
+      <div style="background:#454345;border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:12px;display:flex;flex-direction:column;gap:10px"><div class="wf-img" style="aspect-ratio:9/16;border-radius:10px;background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.22);color:rgba(255,255,255,.6)">Video 2 · 9:16</div><p class="wf-p" style="color:#fff;font-size:12px;padding:0 4px 4px">Sarah Said, 44 tahun</p></div>
+      <div style="background:#454345;border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:12px;display:flex;flex-direction:column;gap:10px"><div class="wf-img" style="aspect-ratio:9/16;border-radius:10px;background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.22);color:rgba(255,255,255,.6)">Video 3 · 9:16</div><p class="wf-p" style="color:#fff;font-size:12px;padding:0 4px 4px">Rachelia, 20 tahun</p></div>
+    </div>
+    
+  </div>
+
+  <div data-screen-label="Hasil Nyata mobile" style="padding:0 20px 28px;display:flex;flex-direction:column;gap:14px">
+    <div style="display:flex;flex-direction:column;gap:6px">
+      <p class="wf-eyebrow" style="color:#8cece3">HASIL NYATA</p>
+      <h2 style="font:700 20px/1.2 Poppins,sans-serif;letter-spacing:-.025em;color:#fff;margin:0">Lihat Perubahannya</h2>
+      <p class="wf-p" style="color:rgba(255,255,255,.7);font-size:12px">Simulasi penggunaan produk Tea Tree Acne Serum.</p>
+    </div>
+    <div style="background:#454345;border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:12px;display:flex;flex-direction:column;gap:10px"><div class="wf-img" style="aspect-ratio:1/1;border-radius:10px;background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.22);color:rgba(255,255,255,.6);font-size:11px">Foto week-1 (lumena.id)</div><div style="padding:0 4px 4px;display:flex;flex-direction:column;gap:3px"><h3 style="font:600 14px Poppins,sans-serif;color:#8cece3;margin:0">Sebelum</h3><p class="wf-p" style="color:rgba(255,255,255,.7);font-size:12px">Jerawat aktif &amp; meradang</p></div></div><div style="background:#454345;border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:12px;display:flex;flex-direction:column;gap:10px"><div class="wf-img" style="aspect-ratio:1/1;border-radius:10px;background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.22);color:rgba(255,255,255,.6);font-size:11px">Foto week-3 (lumena.id)</div><div style="padding:0 4px 4px;display:flex;flex-direction:column;gap:3px"><h3 style="font:600 14px Poppins,sans-serif;color:#8cece3;margin:0">3 Minggu</h3><p class="wf-p" style="color:rgba(255,255,255,.7);font-size:12px">Jerawat &amp; kemerahan berkurang</p></div></div><div style="background:#454345;border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:12px;display:flex;flex-direction:column;gap:10px"><div class="wf-img" style="aspect-ratio:1/1;border-radius:10px;background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.22);color:rgba(255,255,255,.6);font-size:11px">Foto week-6 (lumena.id)</div><div style="padding:0 4px 4px;display:flex;flex-direction:column;gap:3px"><h3 style="font:600 14px Poppins,sans-serif;color:#8cece3;margin:0">6 Minggu</h3><p class="wf-p" style="color:rgba(255,255,255,.7);font-size:12px">Bersih dari jerawat, bekas memudar</p></div></div>
+    <p class="wf-p" style="font-size:10px;color:rgba(255,255,255,.5)">Gambar merupakan ilustrasi simulasi tahapan perawatan. Hasil dapat berbeda pada setiap individu.</p>
+  </div>
+
+  <div data-screen-label="Formulator" style="padding:28px 20px;border-top:1px solid rgba(255,255,255,.12);display:flex;flex-direction:column;gap:14px">
+    <div style="background:#454345;border:1px solid rgba(255,255,255,.15);border-left:3px solid #8cece3;border-radius:14px;padding:20px 16px;display:flex;flex-direction:column;gap:12px">
+      <div class="wf-img" style="height:220px;border-radius:12px;background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.22);color:rgba(255,255,255,.6)">Foto dr. Nico A. Lumenta</div>
+      <h2 style="font:700 14px/1.3 Poppins,sans-serif;letter-spacing:-.025em;color:#fff;margin:0">Formulator</h2>
+      <div style="display:flex;flex-direction:column;gap:4px"><h3 style="font: 600 20px/1.25 Poppins,sans-serif; color: #fff; margin: 0; font-size: 18px">dr. Nico A. Lumenta, K.Nefro, MM</h3><p class="wf-eyebrow" style="color:#8cece3">Dokter senior, pencetus keamanan pasien · Kabid Litbang KARS</p></div>
+      <p class="wf-p" style="color:rgba(255,255,255,.7);font-size:12px">Diformulasikan oleh dokter yang mengutamakan keamanan pasien.<br><br>Di balik setiap botol, ada dokter senior yang bertanggung jawab. · Produk yang lahir dari prinsip keamanan pasien.</p>
+    </div>
+    
+  </div>
+
+  <div data-screen-label="Peluang" style="padding:28px 20px;border-top:1px solid rgba(255,255,255,.12);display:flex;flex-direction:column;gap:14px">
+    <h2 style="font:700 20px/1.2 Poppins,sans-serif;letter-spacing:-.025em;color:#fff;margin:0">Pasarnya besar, margin tinggi &amp; pembelinya balik lagi.</h2>
+    <div style="background:#454345;border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:18px 16px;display:flex;flex-direction:column;gap:10px"><div style="width:34px;height:34px;border-radius:10px;background:rgba(140,236,227,.12);border:1px solid rgba(140,236,227,.35);display:flex;align-items:center;justify-content:center;color:#8cece3"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"></circle><path d="M2.5 19c0-3.3 2.9-5 6.5-5s6.5 1.7 6.5 5"></path><path d="M16.5 6.2a3 3 0 0 1 0 5.6"></path><path d="M18.5 14.4c1.9.6 3 1.9 3 4.6"></path></svg></div><h3 style="font:600 15px Poppins,sans-serif;color:#fff;margin:0">Pasar Luas</h3><p class="wf-p" style="color:rgba(255,255,255,.7);font-size:12px">Jerawat dialami hampir semua orang usia 12–30 tahun dan mereka aktif mencari solusinya. Permintaannya sudah ada, Anda tinggal menawarkan.</p></div>
+    <div style="background:#454345;border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:18px 16px;display:flex;flex-direction:column;gap:10px"><div style="width:34px;height:34px;border-radius:10px;background:rgba(140,236,227,.12);border:1px solid rgba(140,236,227,.35);display:flex;align-items:center;justify-content:center;color:#8cece3"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 17 9.5 10.5 13.5 14.5 21 7"></polyline><polyline points="15 7 21 7 21 13"></polyline></svg></div><h3 style="font:600 15px Poppins,sans-serif;color:#fff;margin:0">Untung Besar</h3><p class="wf-p" style="color:rgba(255,255,255,.7);font-size:12px">Setiap botol memberi untung hingga 153%, tergantung level kemitraan Anda. Modal kembali dari botol pertama.</p></div>
+    <div style="background:#454345;border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:18px 16px;display:flex;flex-direction:column;gap:10px"><div style="width:34px;height:34px;border-radius:10px;background:rgba(140,236,227,.12);border:1px solid rgba(140,236,227,.35);display:flex;align-items:center;justify-content:center;color:#8cece3"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 13.7-5.6L21 9"></path><polyline points="21 4 21 9 16 9"></polyline><path d="M20 12a8 8 0 0 1-13.7 5.6L3 15"></path><polyline points="3 20 3 15 8 15"></polyline></svg></div><h3 style="font:600 15px Poppins,sans-serif;color:#fff;margin:0">Repeat Order</h3><p class="wf-p" style="color:rgba(255,255,255,.7);font-size:12px">Satu botol habis dalam sebulan dan jerawat butuh perawatan rutin. Pembeli yang cocok akan kembali ke Anda.</p></div>
+    
+  </div>
+
+  <div data-screen-label="Fasilitas Mitra" style="padding:28px 20px;border-top:1px solid rgba(255,255,255,.12);display:flex;flex-direction:column;gap:14px">
+    <h2 style="font:700 20px/1.2 Poppins,sans-serif;letter-spacing:-.025em;color:#fff;margin:0">Fasilitas mitra yang mendukung penjualan Anda.</h2>
+    <div style="background:linear-gradient(135deg,rgba(140,236,227,.10),rgba(140,236,227,.03));border:1px solid #8cece3;border-radius:14px;padding:20px 16px;display:flex;flex-direction:column;gap:11px">
+      <div style="width:36px;height:36px;border-radius:9px;background:rgba(140,236,227,.12);border:1px solid rgba(140,236,227,.35);display:flex;align-items:center;justify-content:center;color:#8cece3"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"></path><circle cx="12" cy="10" r="2.6"></circle></svg></div>
+      <h3 style="font:600 15px Poppins,sans-serif;color:#fff;margin:0">Kontak Anda di Website Resmi Lumena</h3>
+      <p class="wf-p" style="color:rgba(255,255,255,.75);font-size:12px">Nama dan nomor WhatsApp Anda dipasang di halaman resmi Lumena sebagai mitra kota Anda. Konsumen yang mencari produk di kota Anda menghubungi Anda langsung.</p>
+      <div class="wf-img" style="height:110px;border-radius:12px;background:rgba(255,255,255,.06);border-color:rgba(140,236,227,.4);color:rgba(255,255,255,.6);font-size:11px">Mockup halaman "Mitra di kota Anda"</div>
+    </div>
+    <div style="background:#454345;border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:18px 16px;display:flex;flex-direction:column;gap:7px"><div style="width:32px;height:32px;border-radius:9px;background:rgba(140,236,227,.12);border:1px solid rgba(140,236,227,.35);display:flex;align-items:center;justify-content:center;color:#8cece3"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5A2 2 0 0 1 5 6.5h2l1.2-2h7.6L17 6.5h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"></path><circle cx="12" cy="12.5" r="3.4"></circle></svg></div><h3 style="font:600 14px Poppins,sans-serif;color:#fff;margin:0">Foto &amp; Video Produk</h3><p class="wf-p" style="color:rgba(255,255,255,.7);font-size:12px">Kumpulan foto dan video produk siap pakai — tinggal unggah ke TikTok, Instagram, atau marketplace tanpa perlu membuat materi sendiri.</p></div>
+    <div style="background:#454345;border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:18px 16px;display:flex;flex-direction:column;gap:7px"><div style="width:32px;height:32px;border-radius:9px;background:rgba(140,236,227,.12);border:1px solid rgba(140,236,227,.35);display:flex;align-items:center;justify-content:center;color:#8cece3"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="15" rx="2.5"></rect><polygon points="10.5 9 15 12 10.5 15"></polygon></svg></div><h3 style="font:600 14px Poppins,sans-serif;color:#fff;margin:0">Video Pengguna</h3><p class="wf-p" style="color:rgba(255,255,255,.7);font-size:12px">Video pengguna yang boleh Anda pakai di semua kanal jualan sebagai bukti produk bekerja.</p></div>
+    
+  </div>
+
+  <div data-screen-label="Highlight CTA" style="padding:44px 20px;border-top:1px solid rgba(255,255,255,.12);background:linear-gradient(135deg,rgba(140,236,227,.12),rgba(140,236,227,.03));display:flex;flex-direction:column;gap:14px;align-items:center;text-align:center">
+    <h2 style="font:700 24px/1.15 Poppins,sans-serif;letter-spacing:-.03em;color:#fff;margin:0">Jadilah mitra pertama di kota Anda.</h2>
+    <p class="wf-ctaq" style="color:rgba(255,255,255,.78)">Tertarik menjadi mitra yang melayani penjualan di kota Anda? Lihat ketersediaan di kota Anda ↓</p>
+    <div class="wf-btn" style="align-self:stretch;padding:15px 20px;font-size:14px">Cek Kota Saya</div>
+  </div>
+
+  <div style="padding:24px 20px;display:flex;flex-direction:column;gap:10px;border-top:1px solid rgba(255,255,255,.12)">
+    <img src="assets/lumena-white-1-fixed.svg" alt="Lumena" style="height:36px;width:auto;align-self:flex-start">
+    <div style="display:flex;flex-wrap:wrap;gap:12px;font:400 10px Poppins,sans-serif;color:rgba(255,255,255,.7)"><span>Kebijakan Privasi</span><span>Syarat &amp; Ketentuan</span><span>Disclaimer</span></div>
+    <p class="wf-p" style="font-size:9px;line-height:1.6;color:rgba(255,255,255,.5)">Persentase yang disebutkan adalah margin per botol dan bukan jaminan penghasilan, hasil setiap mitra dapat berbeda; produk kosmetik terdaftar BPOM NA18250118100, bukan obat; situs ini tidak berafiliasi dengan Facebook, Instagram, maupun Meta Platforms, Inc.</p>
+    <p class="wf-p" style="font-size:9px;color:rgba(255,255,255,.5)">© 2026 PT Lumena Mentari Nusantara</p>
+  </div>
+</div></div>
+
+<div style="display:flex;flex-wrap:nowrap;gap:28px;align-items:flex-start">
+<div class="dv-opt" id="3c"><div class="dv-olabel"><a class="dv-oid" href="#3c">3c</a>Lightbox "Cek Kota Saya" — 3 langkah (dipakai kedua ukuran)</div>
+<div class="dv-card" style="width:400px;background:#211f21;border-color:rgba(255,255,255,.12);padding:20px;display:flex;flex-direction:column;gap:16px">
+  <div style="display:flex;flex-direction:column;gap:7px">
+    <p class="wf-eyebrow" style="color:#8cece3">Langkah 1 — pilih kota</p>
+    <div style="background:#454345;border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:22px 20px;display:flex;flex-direction:column;gap:12px;box-shadow:0 4px 20px rgba(0,0,0,.25)">
+      <div style="display:flex;align-items:center;justify-content:space-between"><div style="display:flex;gap:5px"><span style="width:18px;height:5px;border-radius:3px;background:#8cece3"></span><span style="width:18px;height:5px;border-radius:3px;background:rgba(255,255,255,.2)"></span><span style="width:18px;height:5px;border-radius:3px;background:rgba(255,255,255,.2)"></span></div><span style="font:400 13px Poppins,sans-serif;color:rgba(255,255,255,.6)">×</span></div>
+      <h3 style="font:600 15px Poppins,sans-serif;color:#fff;margin:0">Kota mana yang ingin Anda cek?</h3>
+      <div style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:10px;padding:11px 13px;font:400 12px Poppins,sans-serif;color:rgba(255,255,255,.4);display:flex;justify-content:space-between">Ketik untuk mencari kota…<span>▾</span></div>
+      <div style="background:#5a585a;border:1px solid rgba(255,255,255,.15);border-radius:10px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.4)">
+        <div style="padding:9px 13px;font:400 11px Poppins,sans-serif;color:#fff;border-bottom:1px solid rgba(255,255,255,.1)">Bandung</div>
+        <div style="padding:9px 13px;font:400 11px Poppins,sans-serif;color:#fff;border-bottom:1px solid rgba(255,255,255,.1)">Bandar Lampung</div>
+        <div style="padding:9px 13px;font:400 11px Poppins,sans-serif;color:#fff">Banjarmasin</div>
+      </div>
+      <div class="wf-btn" style="opacity:.6;box-shadow:none">Cek Ketersediaan</div>
+    </div>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:7px">
+    <p class="wf-eyebrow" style="color:#8cece3">Langkah 2 — hasil ketersediaan</p>
+    <div style="background:#454345;border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:22px 20px;display:flex;flex-direction:column;gap:12px;background-image:radial-gradient(circle at 100% 50%,rgba(140,236,227,.08),transparent 70%)">
+      <div style="display:flex;align-items:center;justify-content:space-between"><div style="display:flex;gap:5px"><span style="width:18px;height:5px;border-radius:3px;background:#8cece3"></span><span style="width:18px;height:5px;border-radius:3px;background:#8cece3"></span><span style="width:18px;height:5px;border-radius:3px;background:rgba(255,255,255,.2)"></span></div><span style="font:400 13px Poppins,sans-serif;color:rgba(255,255,255,.6)">×</span></div>
+      <div style="width:40px;height:40px;border-radius:50%;background:#8cece3;display:flex;align-items:center;justify-content:center;font:700 15px Poppins,sans-serif;color:#17302e;box-shadow:0 6px 24px rgba(140,236,227,.35)">✓</div>
+      <h3 style="font:600 15px Poppins,sans-serif;color:#fff;margin:0">Kabar baik. {Kota} masih tersedia.</h3>
+      <p class="wf-p" style="color:rgba(255,255,255,.7);font-size:12px">Belum ada mitra Lumena yang melayani penjualan di {Kota}. Anda bisa menjadi yang pertama.</p>
+      <div class="wf-btn">Saya Tertarik</div>
+      <p class="wf-p" style="font-size:11px;color:rgba(255,255,255,.6);text-decoration:underline;text-align:center">Cek kota lain</p>
+    </div>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:7px">
+    <p class="wf-eyebrow" style="color:#8cece3">Langkah 3 — isi data</p>
+    <div style="background:#454345;border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:22px 20px;display:flex;flex-direction:column;gap:11px">
+      <div style="display:flex;align-items:center;justify-content:space-between"><div style="display:flex;gap:5px"><span style="width:18px;height:5px;border-radius:3px;background:#8cece3"></span><span style="width:18px;height:5px;border-radius:3px;background:#8cece3"></span><span style="width:18px;height:5px;border-radius:3px;background:#8cece3"></span></div><span style="font:400 13px Poppins,sans-serif;color:rgba(255,255,255,.6)">×</span></div>
+      <h3 style="font:600 15px Poppins,sans-serif;color:#fff;margin:0">Satu langkah lagi untuk {Kota}.</h3>
+      <div style="display:flex;align-items:center;gap:8px"><span style="background:rgba(140,236,227,.12);border:1px solid rgba(140,236,227,.5);border-radius:12px;padding:5px 10px;font:500 10px Poppins,sans-serif;color:#8cece3">Kota: {Kota}</span><span style="font:400 10px Poppins,sans-serif;color:rgba(255,255,255,.6);text-decoration:underline">ubah</span></div>
+      <div style="display:flex;flex-direction:column;gap:9px">
+        <div><p class="wf-eyebrow" style="color:rgba(255,255,255,.7);margin-bottom:5px">Nama <span style="color:#8cece3">*</span></p><div style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:10px;height:36px"></div></div>
+        <div><p class="wf-eyebrow" style="color:rgba(255,255,255,.7);margin-bottom:5px">Email <span style="color:#8cece3">*</span></p><div style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:10px;height:36px"></div></div>
+        <div><p class="wf-eyebrow" style="color:rgba(255,255,255,.7);margin-bottom:5px">Nomor WhatsApp <span style="color:#8cece3">*</span></p><div style="background:rgba(255,255,255,.08);border:1px solid #8cece3;border-radius:10px;height:36px;box-shadow:0 0 0 3px rgba(140,236,227,.25)"></div></div>
+      </div>
+      <div class="wf-btn">Kirim Data</div>
+      <p class="wf-p" style="font-size:10px;color:rgba(255,255,255,.6)">Data Anda hanya dipakai untuk menghubungi Anda soal kemitraan.</p>
+    </div>
+  </div>
+  <p class="wf-p" style="font-size:10px;color:rgba(255,255,255,.55)">Setelah "Kirim Data" → halaman Thank You (<a class="dv-oid" href="#3d">3d</a>) · dibuka dari tombol "Cek Kota Saya" di Hero &amp; blok penutup · tutup dengan × atau klik di luar · di HP tampil hampir penuh layar (radius 0, edge-to-edge).</p>
+</div></div>
+
+<div class="dv-opt" id="3d"><div class="dv-olabel"><a class="dv-oid" href="#3d">3d</a>Halaman Thank You — halaman penuh (desktop + mobile)</div>
+<div style="display:flex;gap:20px;align-items:flex-start">
+  <div class="dv-card" style="width:520px;background:#211f21;border-color:rgba(255,255,255,.12)">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:18px 40px;border-bottom:1px solid rgba(255,255,255,.12)">
+      <img src="assets/lumena-riptide-3-fixed.svg" alt="Lumena" style="height:22px;width:auto">
+      <span style="border:1px solid rgba(255,255,255,.2);border-radius:999px;padding:6px 13px;font:500 10px Poppins,sans-serif;color:rgba(255,255,255,.75)">Program Kemitraan</span>
+    </div>
+    <div data-screen-label="Thank You" style="padding:72px 40px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:20px;background:radial-gradient(circle at 50% 0%,rgba(140,236,227,.10),transparent 60%)">
+      <div style="width:56px;height:56px;border-radius:50%;background:#8cece3;display:flex;align-items:center;justify-content:center;font:700 20px Poppins,sans-serif;color:#17302e;box-shadow:0 6px 24px rgba(140,236,227,.35)">✓</div>
+      <h1 style="font:700 32px/1.15 Poppins,sans-serif;letter-spacing:-.03em;color:#fff;margin:0;max-width:440px">Data sudah kami terima.</h1>
+      <p class="wf-p" style="color:rgba(255,255,255,.7);font-size:14px;max-width:460px">Terima kasih, {Nama}. <br>Tim kemitraan Lumena akan menghubungi Anda untuk membahas peluang di {Kota}. <br>Ingin lebih cepat? hubungi kami sekarang lewat WhatsApp.</p>
+      <div class="wf-btn" style="padding:16px 30px;font-size:15px">Terhubung Di WhatsApp</div>
+      <div style="background:#454345;border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:16px 20px;display:flex;flex-direction:column;gap:8px;max-width:460px;width:100%;text-align:left;background-image:radial-gradient(circle at 100% 50%,rgba(140,236,227,.08),transparent 70%)">
+        <p class="wf-eyebrow" style="color:#8cece3">Pre-text WhatsApp terisi otomatis</p>
+        <p class="wf-p" style="color:rgba(255,255,255,.75);font-size:12px">"Halo Lumena, saya {Nama} dari {Kota}. Saya sudah cek dan {Kota} masih tersedia. Saya tertarik menjadi mitra dan ingin tahu langkah selanjutnya."</p>
+      </div>
+      <p class="wf-anno" style="color:#8cd5cd">Pixel konversi dipasang di halaman ini · tanpa tombol lain</p>
+    </div>
+    <div style="padding:30px 40px;display:flex;flex-direction:column;gap:11px;border-top:1px solid rgba(255,255,255,.12)">
+      <img src="assets/lumena-white-1-fixed.svg" alt="Lumena" style="height:36px;width:auto;align-self:flex-start">
+      <div style="display:flex;gap:18px;font:400 11px Poppins,sans-serif;color:rgba(255,255,255,.7)"><span>Kebijakan Privasi</span><span>Syarat &amp; Ketentuan</span><span>Disclaimer</span></div>
+      <p class="wf-p" style="font-size:9px;line-height:1.6;color:rgba(255,255,255,.5)">Persentase yang disebutkan adalah margin per botol dan bukan jaminan penghasilan, hasil setiap mitra dapat berbeda; produk kosmetik terdaftar BPOM NA18250118100, bukan obat; situs ini tidak berafiliasi dengan Facebook, Instagram, maupun Meta Platforms, Inc.</p>
+      <p class="wf-p" style="font-size:9px;color:rgba(255,255,255,.5)">© 2026 PT Lumena Mentari Nusantara</p>
+    </div>
+  </div>
+
+  <div class="dv-card" style="width:375px;background:#211f21;border-color:rgba(255,255,255,.12)">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 20px;border-bottom:1px solid rgba(255,255,255,.12)">
+      <img src="assets/lumena-riptide-3-fixed.svg" alt="Lumena" style="height:20px;width:auto">
+      <span style="border:1px solid rgba(255,255,255,.2);border-radius:999px;padding:5px 11px;font:500 10px Poppins,sans-serif;color:rgba(255,255,255,.75)">Program Kemitraan</span>
+    </div>
+    <div data-screen-label="Thank You mobile" style="padding:40px 20px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px;background:radial-gradient(circle at 50% 0%,rgba(140,236,227,.10),transparent 60%)">
+      <div style="width:48px;height:48px;border-radius:50%;background:#8cece3;display:flex;align-items:center;justify-content:center;font:700 18px Poppins,sans-serif;color:#17302e;box-shadow:0 6px 24px rgba(140,236,227,.35)">✓</div>
+      <h1 style="font:700 24px/1.15 Poppins,sans-serif;letter-spacing:-.03em;color:#fff;margin:0">Data sudah kami terima.</h1>
+      <p class="wf-p" style="color:rgba(255,255,255,.7);font-size:13px"><span style="font-size: 14px;">Terima kasih, {Nama}.</span><br style="font-size: 14px;"><span style="font-size: 14px;">Tim kemitraan Lumena akan menghubungi Anda untuk membahas peluang di {Kota}.</span><br style="font-size: 14px;"><span style="font-size: 14px;">Ingin lebih cepat? hubungi kami sekarang lewat WhatsApp.</span></p>
+      <div class="wf-btn" style="align-self:stretch;padding:15px 20px;font-size:14px">Terhubung Di WhatsApp</div>
+      <div style="background:#454345;border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;gap:7px;text-align:left;width:100%;background-image:radial-gradient(circle at 100% 50%,rgba(140,236,227,.08),transparent 70%)">
+        <p class="wf-eyebrow" style="color:#8cece3">Pre-text WhatsApp</p>
+        <p class="wf-p" style="color:rgba(255,255,255,.75);font-size:11px">"Halo Lumena, saya {Nama} dari {Kota}. Saya sudah cek dan {Kota} masih tersedia. Saya tertarik menjadi mitra dan ingin tahu langkah selanjutnya."</p>
+      </div>
+    </div>
+    <div style="padding:22px 20px;display:flex;flex-direction:column;gap:9px;border-top:1px solid rgba(255,255,255,.12)">
+      <img src="assets/lumena-white-1-fixed.svg" alt="Lumena" style="height:36px;width:auto;align-self:flex-start">
+      <div style="display:flex;flex-wrap:wrap;gap:12px;font:400 10px Poppins,sans-serif;color:rgba(255,255,255,.7)"><span>Kebijakan Privasi</span><span>Syarat &amp; Ketentuan</span><span>Disclaimer</span></div>
+      <p class="wf-p" style="font-size:9px;line-height:1.6;color:rgba(255,255,255,.5)">Margin per botol, bukan jaminan penghasilan · kosmetik BPOM NA18250118100, bukan obat · tidak berafiliasi dengan Meta.</p>
+      <p class="wf-p" style="font-size:9px;color:rgba(255,255,255,.5)">© 2026 PT Lumena Mentari Nusantara</p>
+    </div>
+  </div>
+</div></div>
+</div>
+</div>
+<p class="dv-next">Try next: "jadikan <a class="dv-oid" href="#3a">3a</a> hi-fi dengan foto asli" · "buat versi tablet"</p>
+</section>
+
+
+
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}"></script>
+</body>
+</html>

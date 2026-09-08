@@ -1,0 +1,187 @@
+/* ============================================================
+   Lumena Design System - Foundations
+   "Your True Light"
+
+   Vendored from the Claude Design project
+   "Lumena partnership website wireframes"
+   (_ds/lumena-design-system-019df29c-0eaa-785d-979c-d8754d6d6797).
+
+   NOTE: the upstream file declares 18 @font-face rules pointing at
+   fonts/Poppins-*.ttf. Those binaries are not vendored here, so that
+   block is intentionally omitted and Poppins is loaded from Google
+   Fonts in each page's <head> instead. Everything below is
+   unchanged from upstream.
+   ============================================================ */
+
+:root {
+  /* ---------- Brand Color Tokens ---------- */
+  /* Riptide - the brand's signature mint/cyan */
+  --lmn-riptide-50:  #f0fbf9;
+  --lmn-riptide-100: #d6f6f1;
+  --lmn-riptide-200: #a8f1ea;  /* hover */
+  --lmn-riptide-300: #8cece3;  /* PRIMARY */
+  --lmn-riptide-400: #6cdfd4;
+  --lmn-riptide-500: #3fb8ad;
+  --lmn-riptide-600: #2a8e85;
+
+  /* Charcoal - base surfaces */
+  --lmn-ink-900: #1a1a1a;  /* darkest, on-button text */
+  --lmn-ink-850: #211f21;  /* page bg */
+  --lmn-ink-800: #2b292b;
+  --lmn-ink-700: #3a383a;
+  --lmn-ink-600: #454345;  /* container / form bg */
+  --lmn-ink-500: #5a585a;  /* dropdowns, raised surface */
+  --lmn-ink-400: #6f6d6f;
+  --lmn-ink-300: #9a989a;
+
+  /* Pure */
+  --lmn-white: #ffffff;
+  --lmn-black: #000000;
+
+  /* Translucent helpers used throughout the brand */
+  --lmn-fg-on-dark:        rgba(255,255,255,1);
+  --lmn-fg-on-dark-2:      rgba(255,255,255,0.7);
+  --lmn-fg-on-dark-3:      rgba(255,255,255,0.4);
+  --lmn-stroke-soft:       rgba(255,255,255,0.15);
+  --lmn-stroke-strong:     rgba(255,255,255,0.25);
+  --lmn-input-bg:          rgba(255,255,255,0.08);
+  --lmn-input-bg-active:   rgba(255,255,255,0.12);
+  --lmn-riptide-tint-08:   rgba(140,236,227,0.08);
+  --lmn-riptide-tint-15:   rgba(140,236,227,0.15);
+  --lmn-riptide-tint-25:   rgba(140,236,227,0.25);
+  --lmn-riptide-tint-50:   rgba(140,236,227,0.50);
+  --lmn-riptide-glow:      rgba(140,236,227,0.30);
+  --lmn-riptide-glow-strong: rgba(140,236,227,0.45);
+
+  /* ---------- Semantic Colors ---------- */
+  --bg:           var(--lmn-ink-850);
+  --bg-elevated:  var(--lmn-ink-600);
+  --bg-raised:    var(--lmn-ink-500);
+  --bg-input:     var(--lmn-input-bg);
+  --fg:           var(--lmn-white);
+  --fg-muted:     var(--lmn-fg-on-dark-2);
+  --fg-faint:     var(--lmn-fg-on-dark-3);
+  --accent:       var(--lmn-riptide-300);
+  --accent-hover: var(--lmn-riptide-200);
+  --accent-text:  var(--lmn-ink-900);
+  --border:       var(--lmn-stroke-soft);
+  --border-hover: var(--lmn-riptide-tint-50);
+  --focus-ring:   var(--lmn-riptide-tint-25);
+
+  /* Status */
+  --status-error:        #ff6b6b;
+  --status-error-bg:     #ec8c96;
+  --status-error-border: #e07a86;
+  --status-error-text:   #4a1015;
+  --status-success:      var(--lmn-riptide-300);
+  --status-warning:      #f0c674;
+
+  /* ---------- Spacing (4px base scale) ---------- */
+  --space-1:  4px;  /* @kind spacing */
+  --space-2:  8px;  /* @kind spacing */
+  --space-3:  12px; /* @kind spacing */
+  --space-4:  16px; /* @kind spacing */
+  --space-5:  20px; /* @kind spacing */
+  --space-6:  24px; /* @kind spacing */
+  --space-7:  28px; /* @kind spacing */
+  --space-8:  32px; /* @kind spacing */
+  --space-10: 40px; /* @kind spacing */
+  --space-12: 48px; /* @kind spacing */
+  --space-16: 64px; /* @kind spacing */
+  --space-20: 80px; /* @kind spacing */
+
+  /* ---------- Corner Radii ---------- */
+  --radius-xs:   6px;   /* @kind radius */
+  --radius-sm:   8px;   /* @kind radius */
+  --radius-md:   10px;  /* @kind radius */
+  --radius-badge: 12px; /* @kind radius */
+  --radius-lg:   14px;  /* @kind radius */
+  --radius-xl:   18px;  /* @kind radius */
+  --radius-pill: 999px; /* @kind radius */
+
+  /* ---------- Typography Scale ---------- */
+  --font-sans: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* Display & headings - tight tracking on the brand's geometric sans */
+  --fs-display: 56px;   --lh-display: 1.05; /* @kind font */  --ls-display: -0.03em;
+  --fs-h1:      40px;   --lh-h1:      1.1; /* @kind font */   --ls-h1:      -0.025em;
+  --fs-h2:      28px;   --lh-h2:      1.2; /* @kind font */   --ls-h2:      -0.02em;
+  --fs-h3:      20px;   --lh-h3:      1.3; /* @kind font */   --ls-h3:      -0.02em;
+  --fs-h4:      16px;   --lh-h4:      1.35; /* @kind font */  --ls-h4:      -0.01em;
+
+  /* Body */
+  --fs-lead:    18px;   --lh-lead:    1.55; /* @kind font */
+  --fs-body:    15px;   --lh-body:    1.5; /* @kind font */
+  --fs-small:   13px;   --lh-small:   1.45; /* @kind font */
+  --fs-tiny:    11px;   --lh-tiny:    1.4; /* @kind font */
+
+  /* Eyebrow / overline */
+  --fs-eyebrow: 11px;   --ls-eyebrow: 0.1em;
+
+  /* Weights */
+  --fw-light: 300; /* @kind font */
+  --fw-regular: 400; /* @kind font */
+  --fw-medium: 500; /* @kind font */
+  --fw-semibold: 600; /* @kind font */
+  --fw-bold: 700; /* @kind font */
+  --fw-black: 900; /* @kind font */
+
+  /* ---------- Spacing (4px scale) ---------- */
+  --sp-1: 4px;   --sp-2: 8px;   --sp-3: 12px;  --sp-4: 16px;
+  --sp-5: 20px;  --sp-6: 24px;  --sp-7: 28px;  --sp-8: 32px;
+  --sp-10: 40px; --sp-12: 48px; --sp-16: 64px; --sp-20: 80px;
+
+  /* ---------- Radii ---------- */
+  --r-xs: 6px;
+  --r-sm: 8px;
+  --r-md: 10px;     /* inputs, buttons */
+  --r-lg: 12px;     /* date badge, summary cards */
+  --r-xl: 14px;     /* schedule cards, quiz options */
+  --r-2xl: 18px;
+  --r-pill: 999px;
+
+  /* ---------- Shadows ---------- */
+  --sh-card:       0 4px 20px rgba(0,0,0,0.25), 0 8px 40px rgba(0,0,0,0.15);
+  --sh-popover:    0 8px 32px rgba(0,0,0,0.4);
+  --sh-btn:        0 4px 14px var(--lmn-riptide-glow);
+  --sh-btn-hover:  0 6px 20px var(--lmn-riptide-glow-strong);
+  --sh-glow-sm:    0 2px 8px var(--lmn-riptide-tint-25);
+  --sh-glow-md:    0 6px 24px rgba(140,236,227,0.35);
+  --sh-focus-ring: 0 0 0 3px var(--focus-ring);
+
+  /* ---------- Motion ---------- */
+  --ease-out: cubic-bezier(0.2, 0.7, 0.3, 1); /* @kind other */
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1); /* @kind other */
+  --dur-fast: 150ms; /* @kind other */
+  --dur-base: 200ms; /* @kind other */
+  --dur-slow: 300ms; /* @kind other */
+}
+
+/* ============================================================
+   Semantic typographic primitives - drop-in classes
+   ============================================================ */
+.lmn-display { font-family: var(--font-sans); font-weight: var(--fw-bold); font-size: var(--fs-display); line-height: var(--lh-display); letter-spacing: var(--ls-display); color: var(--fg); }
+.lmn-h1      { font-family: var(--font-sans); font-weight: var(--fw-bold); font-size: var(--fs-h1); line-height: var(--lh-h1); letter-spacing: var(--ls-h1); color: var(--fg); }
+.lmn-h2      { font-family: var(--font-sans); font-weight: var(--fw-semibold); font-size: var(--fs-h2); line-height: var(--lh-h2); letter-spacing: var(--ls-h2); color: var(--fg); }
+.lmn-h3      { font-family: var(--font-sans); font-weight: var(--fw-semibold); font-size: var(--fs-h3); line-height: var(--lh-h3); letter-spacing: var(--ls-h3); color: var(--fg); }
+.lmn-h4      { font-family: var(--font-sans); font-weight: var(--fw-semibold); font-size: var(--fs-h4); line-height: var(--lh-h4); letter-spacing: var(--ls-h4); color: var(--fg); }
+.lmn-lead    { font-family: var(--font-sans); font-weight: var(--fw-regular); font-size: var(--fs-lead); line-height: var(--lh-lead); color: var(--fg-muted); }
+.lmn-body    { font-family: var(--font-sans); font-weight: var(--fw-regular); font-size: var(--fs-body); line-height: var(--lh-body); color: var(--fg); }
+.lmn-small   { font-family: var(--font-sans); font-weight: var(--fw-regular); font-size: var(--fs-small); line-height: var(--lh-small); color: var(--fg-muted); }
+.lmn-eyebrow { font-family: var(--font-sans); font-weight: var(--fw-semibold); font-size: var(--fs-eyebrow); letter-spacing: var(--ls-eyebrow); text-transform: uppercase; color: var(--fg-muted); }
+
+/* ============================================================
+   Page baseline
+   ============================================================ */
+html, body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@keyframes lmn-spin { to { transform: rotate(360deg); } }

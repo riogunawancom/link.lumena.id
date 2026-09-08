@@ -1,0 +1,26 @@
+---
+description: Lead capture lightbox, validation, API forwarding, and thank-you page
+globs: "{components/CekKota*.tsx,components/CityCombobox.tsx,app/api/lead/**,app/terima-kasih/**,lib/lead.ts,lib/cities.ts,lib/marketing.ts}"
+alwaysApply: false
+---
+
+# Lead flow
+
+Three-step lightbox (`CekKotaModal`): (0) pick city → (1) “masih tersedia” → (2) nama depan / nama belakang / email / WhatsApp. City must be an exact match from `lib/cities.ts`; free typing does not count as selected.
+
+## Validation
+
+`validateLead` in `lib/lead.ts` runs **client and server**. Unknown cities → 400. Never skip server validation. Email must look deliverable. WhatsApp is stored as E.164 (`+62812…`); the form defaults to **+62** and requires a country code.
+
+On submit: `POST /api/lead`, then **always** `router.push(/terima-kasih?nama=&kota=&utm_*&fbclid=&external_id=…)` even if fetch fails — do not block the prospect. Marketing click params follow onto thank-you (not Pixel cookies `fbp`/`fbc`). Thank-you is a **separate page** so the Meta Pixel `Lead` event can fire there (`MetaPixelLead`), not inside the modal.
+
+## `/api/lead`
+
+Server-only. Forwards `{ namaDepan, namaBelakang, nama, email, whatsapp, kota, waktu, sumber, utm_*, gclid, fbclid, external_id, fbp, fbc, … }` to `LEAD_ENDPOINT` (8s timeout). `nama` is the joined full name for older consumers. Marketing keys come from the landing URL (allowlisted in `lib/marketing.ts`), plus Meta Pixel cookies `_fbp`/`_fbc` and a first-party `external_id`; persisted in `sessionStorage` so they survive in-site navigation. The API also parses UTM/fbclid from `Referer` as fallback. Missing/failing endpoint → `{ ok: true, stored: false }` + server log. Never expose `LEAD_ENDPOINT` to the browser.
+
+## Thank-you (`/terima-kasih`)
+
+- `nama` / `kota` from query, trimmed to 60 chars, rendered as text (React escapes). Click params (`utm_*`, `fbclid`, `external_id`, …) stay in the URL for Pixel/attribution; they are not shown in the copy.
+- `WA_NUMBER` is read per request. Empty → disabled button, not a broken link.
+- Pretext from `waPretext()` must keep “sudah cek dan {kota} masih tersedia”.
+- `robots: { index: false, follow: false }`.

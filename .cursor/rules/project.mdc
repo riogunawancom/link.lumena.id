@@ -1,0 +1,37 @@
+---
+description: link.lumena.id — product, stack, architecture, and go-live constraints
+alwaysApply: true
+---
+
+# Program Kemitraan Lumena (`link.lumena.id`)
+
+Landing page for Lumena Tea Tree Acne Serum partnership (reseller / agen / distributor). Domain: `https://link.lumena.id`. Language of UI copy and code comments: Indonesian. Identifiers mix Indonesian product terms (`CekKota`, `terima-kasih`, `kota`) with English.
+
+## Stack
+
+- Next.js 16 App Router, React 19, TypeScript strict, path alias `@/*`
+- Dev/start port **5188** (`npm run dev`)
+- No Tailwind, no UI library. Page styles in `app/globals.css` (`pk-*`) on top of vendored Lumena DS in `_ds/lumena-design-system/`
+- Import only `colors_and_type.css` + `ui_kits/registration/kit.css` (`lmn-*` form classes). Do **not** import `ui_kits/marketing/kit.css` (webinar kit)
+- Poppins via `next/font/google`; `--font-sans` remapped in `globals.css`. Do not add `@font-face` or runtime Google Fonts requests
+- Photos self-hosted in `public/foto/` (AVIF). Do not hotlink lumena.id. Videos stay on Bunny Stream (`player.mediadelivery.net`)
+
+## Routes
+
+- `/kemitraan-tea-tree` — 7 sections: Hero → ProductKnowledge → HasilNyata → Formulator → Peluang → FasilitasMitra → HighlightCta
+- `/` — permanent redirect to `/kemitraan-tea-tree`
+- `/terima-kasih` — thank-you (noindex); WhatsApp CTA + Meta Pixel `Lead`
+- `POST /api/lead` — server-only forward to `LEAD_ENDPOINT`
+
+Wireframes live in `design/` (artboards 3a desktop, 3b mobile, 3c lightbox, 3d thank-you). Follow those, not the older brief that wanted CTA on every section.
+
+## Env (`.env.local`, never commit)
+
+| Var | If empty |
+|---|---|
+| `WA_NUMBER` | WhatsApp button disabled (no broken `wa.me` link) |
+| `LEAD_ENDPOINT` | Lead is **not** stored; warn in server log; still return `{ ok: true }` |
+| `NEXT_PUBLIC_META_PIXEL_ID` | No third-party pixel requests at all |
+| `NEXT_PUBLIC_SITE_URL` | Falls back to `https://link.lumena.id` for OG |
+
+Shared copy/assets: `lib/content.ts`. Validation + WA pretext: `lib/lead.ts`. Cities: `lib/cities.ts` (campaign 1: **every** city is available — no “already taken” branch).
