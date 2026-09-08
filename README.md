@@ -13,6 +13,8 @@ npm run dev                  # http://localhost:5188/kemitraan-tea-tree
 
 Perintah lain: `npm run build`, `npm start`, `npm run typecheck`.
 
+Deploy produksi ke Cloudflare Workers: `npm run deploy` (akun **VUTURI - EXTERNAL**, domain `https://link.lumena.id`). `WA_NUMBER` dan `LEAD_ENDPOINT` di-set sebagai Worker secrets, bukan di git.
+
 ---
 
 ## Struktur

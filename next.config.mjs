@@ -1,3 +1,5 @@
+import { initOpenNextCloudflareForDev } from "@opennextjs/cloudflare";
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   /* Semua foto di-host sendiri di /public/foto, jadi tidak ada host
@@ -14,3 +16,5 @@ const nextConfig = {
 };
 
 export default nextConfig;
+
+initOpenNextCloudflareForDev();

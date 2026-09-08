@@ -81,7 +81,7 @@ const DIAL_DIGITS = DIAL_OPTIONS.map((o) => o.dial.slice(1)).sort(
   (a, b) => b.length - a.length,
 );
 
-const KNOWN_DIALS = new Set(DIAL_OPTIONS.map((o) => o.dial));
+const KNOWN_DIALS = new Set<string>(DIAL_OPTIONS.map((o) => o.dial));
 
 function digitsOnly(value: string): string {
   return value.replace(/\D/g, "");
